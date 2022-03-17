@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2022_03_17_110453) do
     t.string "school", null: false
     t.string "department", null: false
     t.string "course"
+    t.integer "grade", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
