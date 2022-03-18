@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+         has_many :schedules
          validates :name, :school, :department, presence: true
          validates :grade, numericality: { only_integer: true }, presence: { message: "can't be blank" }
 end
