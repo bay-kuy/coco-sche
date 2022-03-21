@@ -1,6 +1,7 @@
 class Schedule < ApplicationRecord
   belongs_to :user
 
+  default_scope -> { order(start_time: :asc) }
   validates :start, :end, presence: true
   validate  :start_end_check
   
