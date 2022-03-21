@@ -14,18 +14,18 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             新規作成
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">予定を追加する</a></li>
-            <li><a class="dropdown-item" href="#">講義を追加する</a></li>
+            <li>
+              <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#scheduleModal">
+              予定を追加する
+              </a>
+            </li>
             <li><a class="dropdown-item" href="#">課題を追加する</a></li>
           </ul>
         </li>
-        <%#<li class="nav-item">
-          <button class="btn btn-light mr-3" type="button">Today</button>
-        </li>%>
       </ul>
       <%#<form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
