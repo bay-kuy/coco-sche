@@ -15,9 +15,8 @@ ActiveRecord::Schema.define(version: 2022_03_18_060608) do
   create_table "schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "title"
-    t.date "date", null: false
-    t.time "s_time", null: false
-    t.time "e_time", null: false
+    t.datetime "start", null: false
+    t.datetime "end", null: false
     t.string "place"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
