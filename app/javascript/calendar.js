@@ -33,7 +33,7 @@ document.addEventListener('turbolinks:load', () => {
     const form = document.getElementById("form");
     const formData = new FormData(form);
     const XHR = new XMLHttpRequest();
-    XHR.open("POST", "/posts", true);
+    XHR.open("POST", "/schedules", true);
     XHR.responseType = "json";
     XHR.send(formData);
   });
