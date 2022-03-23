@@ -5,7 +5,7 @@
         <h5 class="modal-title" id="scheduleModalLabel">予定新規作成</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <%= form_with(model: @schedule) do |f| %>
+      <%= form_with(model: @schedule, id: "form") do |f| %>
       <div class="modal-body">
         <div class="mb-3">
           <%= f.label :title,"タイトル", { class: "form-label"} %>
@@ -36,10 +36,11 @@
           <%= f.text_area :description, { class: "form-control", placeholder: "説明・補足などを入力" } %>
         </div>
       </div>
-      <% end %>
+
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary">保存する</button>
+        <%= f.submit "保存する" ,class:"btn btn-secondary js-event-create-btn", id: "submit" %>
       </div>
+      <% end %>
     </div>
   </div>
 </div>
