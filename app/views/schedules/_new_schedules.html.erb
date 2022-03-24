@@ -1,0 +1,46 @@
+<div class="modal fade" id="scheduleModal" tabindex="-1" role="dialog" aria-labelledby="scheduleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="scheduleModalLabel">予定新規作成</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <%= form_with(model: @schedule, id: "form") do |f| %>
+      <div class="modal-body">
+        <div class="mb-3">
+          <%= f.label :title,"タイトル", { class: "form-label"} %>
+          <%= f.text_field :title, { class: "form-control", placeholder: "予定を入力" } %>
+        </div>
+        <div class="mb-3">
+          <div>
+          <%= f.label :start,"開始時刻", {class:'control-label'}%>
+          </div>
+          <div class="d-flex flex-row ">
+          <%= f.datetime_select :start, {default: Date.today + 0.hours + 00.minutes, minute_step: 5}, class: 'form-control-sm flex-row' %>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div>
+          <%= f.label :end,"終了時刻", {class:'control-label'}%>
+          </div>
+          <div class="d-flex flex-row ">
+          <%= f.datetime_select :end, {default: Date.today + 0.hours + 00.minutes, minute_step: 5}, class: 'form-control-sm flex-row' %>
+          </div>
+        </div>
+        <div class="mb-3">
+          <%= f.label :place,"場所", { class: "form-label"} %>
+          <%= f.text_field :place, { class: "form-control", placeholder: "場所を入力" } %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :description,"説明", { class: "form-label"} %>
+          <%= f.text_area :description, { class: "form-control", placeholder: "説明・補足などを入力" } %>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <%= f.submit "保存する" ,class:"btn btn-secondary js-event-create-btn", id: "submit" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

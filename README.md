@@ -20,9 +20,8 @@
 |-------------|------------|--------------------------------|
 | user        | references | null: false, foreign_key: true |
 | title       | string     |                                |
-| date        | date       | null: false                    |
-| s_time      | time       | null: false                    |
-| e_time      | time       | null: false                    |
+| start       | datetime   | null: false                    |
+| end         | datetime   | null: false                    |
 | place       | string     |                                |
 | description | text       |                                |
 
