@@ -16,7 +16,7 @@
           <%= f.label :start,"開始時刻", {class:'control-label'}%>
           </div>
           <div class="d-flex flex-row ">
-          <%= f.datetime_select :start, {default: Date.today + 0.hours + 00.minutes, minute_step: 60}, class: 'form-control-sm flex-row' %>
+          <%= f.datetime_select :start, {default: Date.today + 0.hours + 00.minutes, minute_step: 5}, class: 'form-control-sm flex-row' %>
           </div>
         </div>
         <div class="mb-3">
@@ -24,7 +24,7 @@
           <%= f.label :end,"終了時刻", {class:'control-label'}%>
           </div>
           <div class="d-flex flex-row ">
-          <%= f.datetime_select :end, {default: Date.today + 0.hours + 00.minutes, minute_step: 60}, class: 'form-control-sm flex-row' %>
+          <%= f.datetime_select :end, {default: Date.today + 0.hours + 00.minutes, minute_step: 5}, class: 'form-control-sm flex-row' %>
           </div>
         </div>
         <div class="mb-3">

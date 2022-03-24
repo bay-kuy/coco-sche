@@ -1,6 +1,6 @@
 import { Calendar} from '@fullcalendar/core';
 import interactionPlugin from '@fullcalendar/interaction';
-import timeGridPlugin from '@fullcalendar/timegrid'
+import timeGridPlugin from '@fullcalendar/timegrid';
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -39,4 +39,5 @@ document.addEventListener('turbolinks:load', () => {
   });
 
   calendar.render();
+  
 });
